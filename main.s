@@ -1,16 +1,3 @@
-;******************** (C) COPYRIGHT HAW-Hamburg ********************************
-;* File Name          : main.s
-;* Author             : Alfred Lohmann
-;* Author             : Tobias Jaehnichen	
-;* Version            : V2.0
-;* Date               : 23.04.2017
-;* Description        : This is a simple main.
-;					  : The output is send to UART 1. Open Serial Window when 
-;					  : when debugging. Select UART #1 in Serial Window selection.
-;					  :
-;					  : Replace this main with yours.
-;
-;*******************************************************************************
 
 	EXTERN Init_TI_Board		; Initialize the serial line
 	EXTERN ADC3_CH7_DMA_Config  ; Initialize the ADC
@@ -68,7 +55,7 @@ main	PROC
 		bl	TFT_puts		; call TFT output method
 		
 INIT
-		bl timerinit		; Initialize the timer       TODO: DIESER PISSER KOMMT SPÄTER >8-(
+		bl timerinit		; Initialize the timer       TODO: DIESER PISSER KOMMT SPÃ„TER >8-(
 INITLOOP
 		bl displayTime
 		mov r0, #7			; RUNNING Key
